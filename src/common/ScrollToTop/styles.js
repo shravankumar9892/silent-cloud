@@ -4,7 +4,7 @@ export const Up = styled.div`
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: rgba(0, 0, 0, 0.65);
+  color: #142be1ff;
   font-size: 14px;
   line-height: 1.5715;
   list-style: none;

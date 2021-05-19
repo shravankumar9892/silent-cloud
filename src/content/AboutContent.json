@@ -1,15 +1,15 @@
 {
-  "title": "Light, Fast & Responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "One stop digital solution",
+  "text": "Every digital service a business can ever need is covered by SilentCloud. Writing content for blogs, apps; Building software for billing, startup website/app, etc. We have a team of NIT graduates that are experts in what they do, and we want to use our expertise to bring value to you.",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
+      "title": "Creatives",
+      "content": "Writing blogs for a gym, copy writing for beverages, tutorials for edtech company, etc.",
       "icon": "notes.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
+      "title": "Technology",
+      "content": "Debugging applications, building websites, scripting, web/desktop applications, etc.",
       "icon": "notes.svg"
     }
   ]
