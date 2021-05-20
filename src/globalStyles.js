@@ -14,8 +14,13 @@ const Styles = createGlobalStyle`
         padding:0;
         border: 0;
         outline: 0;
-        background: #fff;
+        background: #fff !important;
         overflow-x: hidden;
+    }
+
+    header {
+        background-color: rgba(0,0,0,0) !important;
+        position: inherit !important;
     }
 
     a:hover {
@@ -77,6 +82,10 @@ const Styles = createGlobalStyle`
     .anticon,
     .ant-notification-notice-icon-success {
         color: rgb(255,130,92);
+    }
+
+    .Tag:hover {
+        cursor: pointer;
     }
 `;
 

@@ -3,7 +3,8 @@ import { withTranslation } from "react-i18next";
 import Slide from "react-reveal/Slide";
 
 import SvgIcon from "../../../common/SvgIcon";
-import Button from "../../../common/Button";
+import Button, { CalendlyButton } from "../../../common/Button";
+import { openPopupWidget } from "react-calendly";
 
 import * as S from "./styles";
 
@@ -14,6 +15,43 @@ const RightBlock = ({ title, content, button, icon, t, id }) => {
       behavior: "smooth",
     });
   };
+  const url = "https://calendly.com/silentcloudpartners";
+    const pageSettings = {
+      "backgroundColor": "ffffff",
+      "hideEventTypeDetails": false,
+      "hideLandingPageDetails": false,
+      "primaryColor": "00a2ff",
+      "textColor": "4d5055"
+    }
+    const utm = {
+      "utmCampaign": "Spring Sale 2019",
+      "utmSource": "Facebook",
+      "utmMedium": "Ad",
+      "utmContent": "Shoe and Shirts",
+      "utmTerm": "Spring"
+    }
+    const prefill = {
+      "name": "Jon Snow",
+      "firstName": "Jon",
+      "lastName": "Snow",
+      "email": "test@test.com",
+      "guests": [
+        "janedoe@example.com",
+        "johndoe@example.com"
+      ],
+      "customAnswers": {
+        "a1": "a1",
+        "a2": "a2",
+        "a3": "a3",
+        "a4": "a4",
+        "a5": "a5",
+        "a6": "a6",
+        "a7": "a7",
+        "a8": "a8",
+        "a9": "a9",
+        "a10": "a10"
+      }
+    }
   return (
     <S.RightBlockContainer>
       <Row type="flex" justify="space-between" align="middle" id={id}>
@@ -26,16 +64,30 @@ const RightBlock = ({ title, content, button, icon, t, id }) => {
                 {button &&
                   typeof button === "object" &&
                   button.map((item, id) => {
-                    return (
-                      <Button
-                        key={id}
-                        color={item.color}
-                        width="true"
-                        onClick={() => scrollTo("about")}
-                      >
-                        {t(item.title)}
-                      </Button>
-                    );
+                    if (id%2 === 0) {
+                      return (
+                        <CalendlyButton
+                          key={id}
+                          color={item.color}
+                          width="true"
+                          onClick={() => openPopupWidget({ url, prefill, pageSettings, utm })}
+                        >
+                          {t(item.title)}
+                        </CalendlyButton>
+                      );
+                    }
+                    else {
+                      return (
+                        <Button
+                            key={id}
+                            color={item.color}
+                            width="true"
+                            onClick={() => scrollTo("contact")}
+                        >
+                          {t(item.title)}
+                        </Button>
+                      );
+                    }
                   })}
               </S.ButtonWrapper>
             </S.ContentWrapper>

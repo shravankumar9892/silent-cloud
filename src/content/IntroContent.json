@@ -1,12 +1,12 @@
 {
-  "title": "Tech Consulting by employees of Deloitte & TCS",
-  "text": "We can help your business in everything digital, writing niche blogs, social media content, web apps, mobile apps, Backend API services, scripting, etc.",
+  "title": "Digital Consulting by employees of Deloitte & TCS",
+  "text": "We are all graduates of IITs & NITs, and we can help your business in everything digital, writing niche blogs, social media content, web apps, mobile apps, Backend API services, scripting, etc.",
   "button": [
     {
-      "title": "Explore"
+      "title": "Schedule a call"
     },
     {
-      "title": "Learn More",
+      "title": "Send a message",
       "color": "#fff"
     }
   ]

@@ -6,9 +6,15 @@ export const MiddleBlock = styled.section`
   text-align: center;
   display: flex;
   justify-content: center;
+  background: #deeff7 !important;
+  border-radius: 5%;
 
   @media screen and (max-width: 768px) {
     padding: 5.5rem 0 3rem;
+  }
+
+  @media screen and (min-width: 943px) {
+    margin: 0 9rem;
   }
 `;
 

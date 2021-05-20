@@ -14,6 +14,12 @@ const Footer = ({ t }) => {
     i18n.changeLanguage(event.target.value);
   };
 
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({
+      behavior: "smooth"
+    });
+  };
   const SocialLink = ({ href, src }) => {
     return (
       <a
@@ -36,17 +42,13 @@ const Footer = ({ t }) => {
             <Row type="flex" justify="space-between">
               <Col lg={10} md={10} sm={12} xs={24}>
                 <S.Language>{t("Contact")}</S.Language>
-                <S.Large to="/">{t("Tell us everything")}</S.Large>
                 <S.Para>
                   {t(
                     `Do you have any question regarding the project? Feel free to reach out.`
                   )}
                 </S.Para>
-                <a href="mailto:silentcloudpartners@gmail.com">
-                  <S.Chat>{t(`Let's Chat`)}</S.Chat>
-                </a>
               </Col>
-              <Col lg={8} md={8} sm={12} xs={24}>
+              {/*<Col lg={8} md={8} sm={12} xs={24}>
                 <S.Title>{t("Policy")}</S.Title>
                 <S.Large to="/" left="true">
                   {t("Application Security")}
@@ -54,13 +56,10 @@ const Footer = ({ t }) => {
                 <S.Large left="true" to="/">
                   {t("Software Principles")}
                 </S.Large>
-              </Col>
+              </Col>*/}
               <Col lg={6} md={6} sm={12} xs={24}>
                 <S.Empty />
-                <S.Large left="true" to="/">
-                  {t("Support Center")}
-                </S.Large>
-                <S.Large left="true" to="/">
+                <S.Large left="true" onClick={() => scrollTo("contact")}>
                   {t("Customer Support")}
                 </S.Large>
               </Col>
@@ -75,17 +74,8 @@ const Footer = ({ t }) => {
               </Col>
               <Col lg={8} md={8} sm={12} xs={24}>
                 <S.Title>{t("Company")}</S.Title>
-                <S.Large left="true" to="/">
+                <S.Large left="true" onClick={() => scrollTo("contact")}>
                   {t("About")}
-                </S.Large>
-                <S.Large left="true" to="/">
-                  {t("Blog")}
-                </S.Large>
-                <S.Large left="true" to="/">
-                  {t("Press")}
-                </S.Large>
-                <S.Large left="true" to="/">
-                  {t("Careers & Culture")}
                 </S.Large>
               </Col>
               <Col lg={6} md={6} sm={12} xs={24}>
@@ -124,23 +114,23 @@ const Footer = ({ t }) => {
               </S.NavLink>
               <S.FooterContainer>
                 <SocialLink
-                  href="https://github.com/Adrinlol/create-react-app-adrinlol"
+                  href="https://github.com/shravankumar9892/"
                   src="github.svg"
                 />
                 <SocialLink
-                  href="https://twitter.com/Adrinlolx"
+                  href="https://twitter.com/shravan9892"
                   src="twitter.svg"
                 />
                 <SocialLink
-                  href="https://www.linkedin.com/in/lasha-kakabadze/"
+                  href="https://www.linkedin.com/in/shettyshravankumar/"
                   src="linkedin.svg"
                 />
                 <SocialLink
-                  href="https://github.com/Adrinlol/"
+                  href="https://www.instagram.com/shetty.shravankumar/"
                   src="instagram.svg"
                 />
                 <SocialLink
-                  href="https://medium.com/@lashakakabadze/"
+                  href="https://medium.com/@shravankumarshetty9892"
                   src="medium.svg"
                 />
               </S.FooterContainer>
